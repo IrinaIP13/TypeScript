@@ -5,7 +5,7 @@
 // Приклад exchange(10000,[{currency:’USD’,value:25},{currency:’EUR’,value:42}],’USD’) // => 400
 
 function exchange413(sumUAH:number, currencyValues: {currency:string, value:number}[], exchangeCurrency:string):number {
-    let value = 0;
+    let value:number = 0;
     for (const obj of currencyValues) {
         if (obj.currency === exchangeCurrency) value = obj.value;
     }

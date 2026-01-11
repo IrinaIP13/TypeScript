@@ -2,9 +2,9 @@
 //
 // – створити функцію, яка приймає масив примітивних елементів (числа,стрінги,булеві), та будує для них список (ul li) та виводить його через document.write
 
-type Primitive = number | string | boolean;
+type PrimitiveType = number | string | boolean;
 
-function array48(array: Primitive[]):void {
+function array48(array: PrimitiveType[]):void {
     for (let i = 0; i < array.length; i++) {
         document.write(`<li>${array[i]}</li>`)
     }

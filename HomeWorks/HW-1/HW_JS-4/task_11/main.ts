@@ -2,12 +2,12 @@
 //
 // – створити функцію sum(arr), яка приймає масив чисел, сумує значення елементів масиву та повертає його. Приклад sum([1,2,10]) //->13
 
-function sum(arr: number[]): number {
-    let sum = 0;
+function sum_411(arr: number[]): number {
+    let sum_411:number = 0;
     for (const arrElement of arr) {
-        sum += arrElement;
+        sum_411 += arrElement;
     }
-    return sum;
+    return sum_411;
 }
 
-console.log(sum([6, 4, 7, 3 ,9]))
+console.log(sum_411([6, 4, 7, 3 ,9]))

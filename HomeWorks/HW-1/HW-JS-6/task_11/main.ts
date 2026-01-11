@@ -11,7 +11,7 @@
 //     clubs:[]
 // }
 
-type Cards = {value:string, cardSuit:string, color:string};
+type CardsType = {value:string, cardSuit:string, color:string};
 
 const array_611:{value:string}[] = [];
 for (let i = 6; i <= 10; i++) {
@@ -22,16 +22,16 @@ array_611.push({value:'jack'})
 array_611.push({value:'queen'})
 array_611.push({value:'king'})
 
-let cards_611:Cards[] = create_611('spade', 'black');
+let cards_611:CardsType[] = create_611('spade', 'black');
 cards_611 = cards_611.concat(create_611('diamond', 'red'), create_611('heart', 'red'), create_611('clubs', 'black'));
 
 
-function create_611(suit:string, color:string):Cards[] {
-    return array_611.map((item:{value:string}):Cards => ({...item, cardSuit:`${suit}`, color: `${color}`}));
+function create_611(suit:string, color:string):CardsType[] {
+    return array_611.map((item:{value:string}):CardsType => ({...item, cardSuit:`${suit}`, color: `${color}`}));
 }
 
-type ObjRes = {spades:Cards[], diamonds:Cards[], hearts:Cards[], clubs:Cards[]}
-let objRes_611:ObjRes = cards_611.reduce((acc:ObjRes, cur:Cards):ObjRes => {
+type ObjRes = {spades:CardsType[], diamonds:CardsType[], hearts:CardsType[], clubs:CardsType[]}
+let objRes_611:ObjRes = cards_611.reduce((acc:ObjRes, cur:CardsType):ObjRes => {
     switch (cur.cardSuit){
         case 'spade':
             acc.spades.push(cur);

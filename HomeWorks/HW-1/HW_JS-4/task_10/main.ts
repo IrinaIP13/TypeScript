@@ -2,12 +2,12 @@
 //
 // – створити функцію яка повертає найменьше число з масиву
 
-function minNumber(array:number[]):number{
-    let min = array[0];
+function minNumber_410(array:number[]):number{
+    let min:number = array[0];
     for (let i = 1; i < array.length; i++) {
         if (array[i] < min) min = array[i];
     }
     return min;
 }
 
-console.log(minNumber([86, 9, 156, 0, 32, -4, 387]));
+console.log(minNumber_410([86, 9, 156, 0, 32, -4, 387]));

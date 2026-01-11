@@ -5,8 +5,15 @@
 //     Додати перевірки на undefined, null, NaN.
 //
 //     Подумати і реалізувати логіку, в якій кінцевий об’єкт буде мати функції, які в нього були до цього моменту.
+type UserType_82 = {
+    firstName: string,
+    lastName: string,
+    age: number,
+    greening():void,
+    goodbye():void
+}
 
-const user_82 = {
+const user_82: UserType_82 = {
     firstName: 'John',
     lastName: 'Doe',
     age: 33,
@@ -34,5 +41,5 @@ function deepClone <T> (object: T): T {
     throw new Error('Not implemented');
 }
 
-let cloneUser= deepClone(user_82);
+let cloneUser: UserType_82 = deepClone(user_82);
 console.log(cloneUser);

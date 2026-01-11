@@ -22,7 +22,7 @@
 //             –>
 // за допомогою стилів, побудувати сітку по 2 об’єктах в рядок
 
-type Address = {
+type AddressType = {
     street: string,
     suite: string,
     city: string,
@@ -37,7 +37,7 @@ type UsersListType = {
     name: string,
     username: string,
     email: string,
-    address: Address,
+    address: AddressType,
     phone: string,
     website: string,
     company: {

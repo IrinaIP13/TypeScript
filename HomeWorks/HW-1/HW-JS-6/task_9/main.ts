@@ -2,13 +2,13 @@
 //
 // взяти з arrays.js масив coursesArray
 
-type Array_69 = {
+type ArrayType_69 = {
     title: string,
     monthDuration: number,
     hourDuration: number,
     modules: string[]
 }
-let coursesArray_69: Array_69[] = [
+let coursesArray_69: ArrayType_69[] = [
     {
         title: 'JavaScript Complex',
         monthDuration: 5,
@@ -105,7 +105,7 @@ let coursesArray_69: Array_69[] = [
 ];
 
 // –написати пошук всіх об’єктів, в яких в modules є sass
-console.log(coursesArray_69.filter((value:Array_69):boolean => value.modules.includes('sass')));
+console.log(coursesArray_69.filter((value:ArrayType_69):boolean => value.modules.includes('sass')));
 
 // –написати пошук всіх об’єктів, в яких в modules є docker
-console.log(coursesArray_69.filter((value:Array_69):boolean => value.modules.includes('docker')));
+console.log(coursesArray_69.filter((value:ArrayType_69):boolean => value.modules.includes('docker')));
