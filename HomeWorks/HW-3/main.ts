@@ -16,8 +16,8 @@ const url:string = 'https://dummyjson.com/users';
 
 console.log(foobar<SomeType>(url));
 
-function foobar<SomeType>(url: string):SomeType[] {
-    const arrayUsersSomeType: SomeType[] = [];
+function foobar<T>(url: string):T[] {
+    const arrayUsersSomeType: T[] = [];
     fetch(url)
         .then(res => res.json())
         .then(objectResponse => {
