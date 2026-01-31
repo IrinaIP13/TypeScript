@@ -7,22 +7,9 @@
 //
 // url – ваш ендпоінт, з якого чекаємо відповідь
 const url = 'https://dummyjson.com/users';
-console.log(foobar(url));
-function foobar(url) {
-    const arrayUsersSomeType = [];
-    fetch(url)
-        .then(res => res.json())
-        .then(objectResponse => {
-        let { users } = objectResponse;
-        for (const user of users) {
-            const resUser = {
-                id: user.id,
-                firstName: user.firstName,
-                lastName: user.lastName
-            };
-            console.log(resUser);
-            arrayUsersSomeType.push(resUser);
-        }
-    });
-    return arrayUsersSomeType;
+let index = 0;
+async function foobar(url) {
+    let objectResponse = await fetch(url);
+    return objectResponse.json();
 }
+foobar(url).then(res => console.log(res.users[index].firstName));

@@ -7,30 +7,18 @@
 // url – ваш ендпоінт, з якого чекаємо відповідь
 
 type SomeType = {
-    id: number;
+    users: {id: number;
     firstName: string;
-    lastName: string
+    lastName: string}[]
 }
 
 const url:string = 'https://dummyjson.com/users';
+let index:number = 0;
 
-console.log(foobar<SomeType>(url));
 
-function foobar<T>(url: string):T[] {
-    const arrayUsersSomeType: T[] = [];
-    fetch(url)
-        .then(res => res.json())
-        .then(objectResponse => {
-            let {users} = objectResponse;
-            for (const user of users) {
-                const resUser: any = {
-                id: user.id,
-                firstName: user.firstName,
-                lastName: user.lastName
-                }
-                console.log(resUser);
-                arrayUsersSomeType.push(resUser);
-            }
-        });
-    return arrayUsersSomeType;
+async function foobar<T>(url: string):Promise<T> {
+    let objectResponse = await fetch(url);
+    return objectResponse.json();
 }
+
+foobar<SomeType>(url).then(res => console.log(res.users[index].firstName));
